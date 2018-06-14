@@ -12,21 +12,6 @@ namespace LongBooGames
 		[SerializeField]
 		NetworkManager _NetWorkMnager;
 
-		NetworkIdentity _NetworkIdentity;
-
-		public List<Player> allPlayer = new List<Player>();
-
-		void Start () 
-		{
-			_NetworkIdentity = this.gameObject.AddComponent<NetworkIdentity> ();
-		}
-
-		public void Login(Player player)
-		{
-			allPlayer.Add(player);
-			player.RpcSetPlayer(allPlayer.Count);
-		}
-
 
 	}
 }
